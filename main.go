@@ -105,7 +105,9 @@ func main() {
 	signal.Notify(exitChan, os.Interrupt, os.Kill, syscall.SIGTERM)
 	go exitHandle(fo)
 
-	// fo.Load()
+	if goconfig.ReadBool("server.load", true) {
+		fo.Load()
+	}
 
 	go fo.cleanfile()
 	go fo.cleandir()
