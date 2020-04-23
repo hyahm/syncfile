@@ -30,7 +30,8 @@ islocal=false
 host=192.168.0.100
 port=22
 user=root
-
+# 所属用户和用户组， 只有远程服务才生效
+owner=root
 
 [log]
 # 相对日志目录
