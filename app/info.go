@@ -56,11 +56,13 @@ func (fo *Info) LoopDir(dir string) {
 			if len(fo.Include) > 0 {
 				for _, is := range fo.Include {
 					if strings.Contains(newname, is) {
-						now := time.Now().UnixNano()
 						if _, ok := fo.File[path]; !ok {
 							// 如果文件不存在， 并且是已完成的， 传输文件， 并且
 							// 判断已完成的
-							if now > v.ModTime().UnixNano()+2 {
+							before := v.ModTime().UnixNano()
+							// 如果过了10毫秒， 他的时间还没变化，  那么判断次文件已经上传完了 （也有可能是没上传完就断开了）
+							time.Sleep(10 * time.Millisecond)
+							if v.ModTime().UnixNano() == before {
 								golog.Infof("copy file %s", middir)
 								fo.CopyFile(middir, v.ModTime().UnixNano())
 							}
@@ -69,11 +71,12 @@ func (fo *Info) LoopDir(dir string) {
 					}
 				}
 			} else {
-				now := time.Now().UnixNano()
 				if _, ok := fo.File[path]; !ok {
-					// 如果文件不存在， 并且是已完成的， 传输文件， 并且
-					// 判断已完成的
-					if now > v.ModTime().UnixNano()+2 {
+
+					before := v.ModTime().UnixNano()
+					// 如果过了10毫秒， 他的时间还没变化，  那么判断次文件已经上传完了 （也有可能是没上传完就断开了）
+					time.Sleep(10 * time.Millisecond)
+					if v.ModTime().UnixNano() == before {
 						golog.Infof("copy file %s", middir)
 						fo.CopyFile(middir, v.ModTime().UnixNano())
 					}
