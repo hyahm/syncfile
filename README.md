@@ -15,6 +15,8 @@
 
 [server]
 src=D:\share
+# 是否启用缓存， 调试的时候关上
+load=true
 # 保存的缓存文件
 gob=gob.txt
 

@@ -20,6 +20,7 @@ import (
 	"github.com/hyahm/golog"
 )
 
+// 检测时间间隔， 加大应该会减少cpu资源
 const INTERVAL = 1 * time.Second
 
 func (fo *Info) Load() error {
@@ -321,6 +322,7 @@ func (fo *Info) cleanfile() {
 				delete(fo.File, k)
 			}
 		}
+		time.Sleep(INTERVAL)
 	}
 
 }
@@ -335,6 +337,7 @@ func (fo *Info) cleandir() {
 				delete(fo.Dir, k)
 			}
 		}
+		time.Sleep(INTERVAL)
 	}
 
 }
