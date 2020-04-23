@@ -3,11 +3,14 @@
 
 
 # 环境要求
-1 go version >= 1.12
-2 远程的机器必须是linux 或mac
-3 可以秘钥登录远程的机器
 
+1 go version >= 1.12  
+2 远程的机器必须是linux 或mac  
+3 可以秘钥登录远程的机器  
 
+# 注意点
+
+- 因为文件名有空格和反斜杠的会导致路径问题， 已经默认删除了了反斜杠和空格  
 
 # 配置文件 config
 ```ini
@@ -39,4 +42,16 @@ every=true
 
 # 启动 
 ```
+go run main.go
+```
+
+# 打包二进制
+给不同系统打包
+```
+export GOOS=windows  (linux 打包windows
+$env:GOOS="linux"  (windows 打包 linux)  
+```
+```
+
+go build main.go
 ```
