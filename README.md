@@ -40,4 +40,16 @@ every=true
 
 # 启动 
 ```
+go run main.go
+```
+
+# 打包二进制
+给不同系统打包
+```
+export GOOS=windows  (linux 打包windows
+$env:GOOS="linux"  (windows 打包 linux)  
+```
+```
+
+go build main.go
 ```
