@@ -22,6 +22,8 @@ src=D:\share
 load=true
 # 保存的缓存文件
 gob=gob.txt
+# 只拷贝文件名包含这个字符的文件， 空则拷贝所有
+include=[]
 
 [remote]
 # 如果是 false， 后面的ssh 信息必须要填写， 否则无效
