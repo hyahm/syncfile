@@ -8,3 +8,28 @@
 2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:60 - copy file BlackBox.exe
 2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:70 - BlackBox.exe
 2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/remote.go:26 - scp -P 22 D:\share\BlackBox.exe root@192.168.0.100:/home/test/BlackBox.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:61 - D:\share
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:133 - D:\share
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:67 - D:\share
+2020-04-23 17:09:53 - [ERROR] - PS2019JUPXAFMM - D:/work/syncfile/app/store.go:16 - open gob.txt: The system cannot find the file specified.
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:81 - D:\share
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:19 - start
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\BlackBox.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\QQ_PCDownload1100109234.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\ST510_Full_WebPack_48.3.4531.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\Shadowsocks.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\TeamViewer_Setup.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\UnitySetup64.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\VNC-Viewer-6.19.1115-Windows.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\VSCodeUserSetup-x64-1.41.1.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\Wechat_PCDownload1100109931.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\python-3.7.5-amd64.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\qianniu_(7.13.00N).exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\sogou_pinyin_96b.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\statistics-config.json
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\unlocker302.zip
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\user-wininet.json
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\w.p.s.8894.20.2735.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\winrar-x64-571scp.exe
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\yang.mkv
+2020-04-23 17:09:53 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:55 - D:\share\zy_pYK0k5z5_180322.mp4

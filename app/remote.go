@@ -57,7 +57,7 @@ func (r *Remote) copyfile(path string) {
 	command := fmt.Sprintf(`scp -P %d %s %s@%s:%s`, r.Port, localfile, r.User, r.Host, remotefile)
 	r.shell(command)
 	if r.Owner != r.User {
-		command := fmt.Sprintf(`ssh -p %d %s@%s "chown %s:%s %s"`, r.Port, r.User, r.Host, r.Owner, r.Owner, path)
+		command := fmt.Sprintf(`ssh -p %d %s@%s "chown %s:%s %s"`, r.Port, r.User, r.Host, r.Owner, r.Owner, remotefile)
 		r.shell(command)
 	}
 }

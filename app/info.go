@@ -1,6 +1,7 @@
 package app
 
 import (
+	"encoding/json"
 	"io"
 	"io/ioutil"
 	"log"
@@ -9,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/hyahm/goconfig"
 	"github.com/hyahm/golog"
 )
 
@@ -50,15 +52,31 @@ func (fo *Info) LoopDir(dir string) {
 				fo.Dir[path] = thismtime
 			}
 		} else {
-
 			golog.Info(path)
-			now := time.Now().UnixNano()
-			if _, ok := fo.File[path]; !ok {
-				// 如果文件不存在， 并且是已完成的， 传输文件， 并且
-				// 判断已完成的
-				if now > v.ModTime().UnixNano()+2 {
-					golog.Infof("copy file %s", middir)
-					fo.CopyFile(middir, v.ModTime().UnixNano())
+			if len(fo.Include) > 0 {
+				for _, is := range fo.Include {
+					if strings.Contains(newname, is) {
+						now := time.Now().UnixNano()
+						if _, ok := fo.File[path]; !ok {
+							// 如果文件不存在， 并且是已完成的， 传输文件， 并且
+							// 判断已完成的
+							if now > v.ModTime().UnixNano()+2 {
+								golog.Infof("copy file %s", middir)
+								fo.CopyFile(middir, v.ModTime().UnixNano())
+							}
+						}
+						continue
+					}
+				}
+			} else {
+				now := time.Now().UnixNano()
+				if _, ok := fo.File[path]; !ok {
+					// 如果文件不存在， 并且是已完成的， 传输文件， 并且
+					// 判断已完成的
+					if now > v.ModTime().UnixNano()+2 {
+						golog.Infof("copy file %s", middir)
+						fo.CopyFile(middir, v.ModTime().UnixNano())
+					}
 				}
 			}
 
@@ -123,12 +141,23 @@ func (fo *Info) Cleandir() {
 func NewInfo(local string, remote *Remote, interval time.Duration) *Info {
 
 	golog.Info(local)
+
+	includes := make([]string, 0)
+
+	ib := goconfig.ReadBytes("server.include")
+	err := json.Unmarshal(ib, &includes)
+	if err != nil {
+		golog.Error(err)
+		log.Fatal(err)
+	}
+
 	return &Info{
 		Interval: interval,
 		Local:    local,
 		Dst:      remote,
 		Dir:      make(map[string]int64),
 		File:     make(map[string]int64),
+		Include:  includes,
 	}
 }
 
@@ -139,6 +168,7 @@ type Info struct {
 	Dir      map[string]int64 // 保存文件夹最后修改时间
 	Root     int64            // 根文件夹时间
 	File     map[string]int64 // 所有的文件 信息
+	Include  []string
 }
 
 // 这个dir 是相对目录
