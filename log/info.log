@@ -1,0 +1,10 @@
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:58 - D:\share
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:125 - D:\share
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:64 - D:\share
+2020-04-23 16:48:30 - [ERROR] - PS2019JUPXAFMM - D:/work/syncfile/app/store.go:16 - open gob.txt: The system cannot find the file specified.
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/main.go:78 - D:\share
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:17 - start
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:54 - D:\share\BlackBox.exe
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:60 - copy file BlackBox.exe
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/info.go:70 - BlackBox.exe
+2020-04-23 16:48:30 - [INFO] - PS2019JUPXAFMM - D:/work/syncfile/app/remote.go:26 - scp -P 22 D:\share\BlackBox.exe root@192.168.0.100:/home/test/BlackBox.exe
